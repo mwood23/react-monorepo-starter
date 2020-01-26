@@ -1,0 +1,56 @@
+{
+  "name": "@monorepo-starter/fancy-app-client",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mwood23/react-monorepo-starter#readme",
+  "bugs": {
+    "url": "https://github.com/mwood23/react-monorepo-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwood23/react-monorepo-starter.git"
+  },
+  "license": "MIT",
+  "author": "Marcus Wood <marcus@calderadigital.com>",
+  "main": "build/index.html",
+  "scripts": {
+    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
+    "dev": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "eject": "SKIP_PREFLIGHT_CHECK=true react-scripts eject",
+    "clean": "run-p clean:*",
+    "clean:build": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules",
+    "preinstall": "npx use-yarn",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "yarn lint --fix",
+    "test": "echo 'N/A'"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "dependencies": {
+    "@monorepo-starter/core": "^0.1.0",
+    "@monorepo-starter/fancy-app-shared": "^0.1.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-scripts": "3.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "proxy": "http://localhost:8080"
+}

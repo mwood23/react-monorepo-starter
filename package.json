@@ -1,0 +1,101 @@
+{
+  "name": "monorepo-starter",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "projects/*"
+  ],
+  "author": "Marcus Wood <marcus@calderadigital.com>",
+  "bugs": {
+    "url": "https://github.com/mwood23/react-monorepo-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwood23/react-monorepo-starter.git"
+  },
+  "scripts": {
+    "bootstrap": "yarn install && yarn build",
+    "build": "yarn lerna:run-deps build",
+    "clean": "run-p clean:*",
+    "clean:build": "lerna run clean:build --parallel",
+    "clean:node_modules": "lerna run clean:node_modules --parallel && rimraf node_modules",
+    "commit": "git-cz",
+    "preinstall": "npx use-yarn",
+    "killallNode": "killall node",
+    "lerna": "lerna",
+    "lerna:change": "lerna changed --long || true",
+    "lerna:diff": "lerna diff",
+    "lerna:list": "lerna list --long --all",
+    "lerna:run": "lerna run",
+    "lerna:run-deps": "lerna run --include-dependencies --stream",
+    "lint": "lerna run lint --parallel",
+    "lint:fix": "lerna run lint:fix --parallel",
+    "rebootstrap": "yarn && run-s clean bootstrap killallNode",
+    "release": "yarn build && yarn lerna publish",
+    "test": "lerna run test -- parallel"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@monorepo-starter/babel-preset": "^0.1.0",
+    "@monorepo-starter/rollup-config": "^0.1.0",
+    "@svgr/rollup": "^4.2.0",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-inline-react-svg": "^1.1.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
+    "commitizen": "^4.0.3",
+    "cz-lerna-changelog": "^2.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "^3.7.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^4.2.1",
+    "lerna": "^3.20.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-postcss": "^2.0.3"
+  },
+  "os": [
+    "!win32",
+    "darwin",
+    "linux"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@monorepo-starter/fancy-app-shared",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mwood23/react-monorepo-starter#readme",
+  "bugs": {
+    "url": "https://github.com/mwood23/react-monorepo-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwood23/react-monorepo-starter.git"
+  },
+  "license": "MIT",
+  "author": "Marcus Wood <marcus@calderadigital.com>",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "clean": "run-p clean:*",
+    "clean:build": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules",
+    "dev": "rollup -c rollup.config.js -w",
+    "preinstall": "npx use-yarn",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "yarn lint --fix",
+    "test": "echo 'N/A'"
+  },
+  "devDependencies": {
+    "@monorepo-starter/rollup-config": "^0.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Print to console": {
+    // Take care of the require console vscode bug
+    "prefix": [
+      "log",
+      "cl",
+      "console",
+      "console.",
+      "console.l",
+      "console.lo",
+      "console.log"
+    ],
+    "body": ["console.log($1)"],
+    "description": "Log output to console"
+  }
+}

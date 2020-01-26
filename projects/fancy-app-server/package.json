@@ -1,0 +1,34 @@
+{
+  "name": "@monorepo-starter/fancy-app-server",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mwood23/react-monorepo-starter#readme",
+  "bugs": {
+    "url": "https://github.com/mwood23/react-monorepo-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwood23/react-monorepo-starter.git"
+  },
+  "license": "MIT",
+  "author": "Marcus Wood <marcus@calderadigital.com>",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "babel src --out-dir dist/ --ignore '**/*.test.js'",
+    "dev": "onchange -ik 'src/**/*.*' -- yarn start",
+    "clean": "run-p clean:*",
+    "clean:build": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules",
+    "preinstall": "npx use-yarn",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "yarn lint --fix",
+    "start": "yarn build && node dist/server.js",
+    "test": "echo 'N/A'"
+  },
+  "dependencies": {
+    "@monorepo-starter/fancy-app-shared": "^0.1.0",
+    "express": "^4.17.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

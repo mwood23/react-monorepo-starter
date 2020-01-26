@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "../"
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#0080ee",
+      "titleBar.activeForeground": "#ffffff",
+      "titleBar.inactiveBackground": "#0080ee",
+      "titleBar.inactiveForeground": "#ffffff"
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/build": true,
+      "**/projects/*/dist": true,
+      "**/packages/*/dist": true,
+      "**/projects/*/build": true,
+      "**/packages/*/build": true,
+      "**/projects/*/coverage": true,
+      "**/packages/*/coverage": true
+    },
+    "files.exclude": {
+      "**/projects/ecommerce-stripe*": true,
+      "**/build": true
+    }
+  }
+}

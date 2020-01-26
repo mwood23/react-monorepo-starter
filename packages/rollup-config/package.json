@@ -1,0 +1,41 @@
+{
+  "name": "@monorepo-starter/rollup-config",
+  "version": "0.1.0",
+  "description": "Rollup config used by @monorepo-starter",
+  "bugs": {
+    "url": "https://github.com/mwood23/react-monorepo-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwood23/react-monorepo-starter.git"
+  },
+  "license": "MIT",
+  "author": "Marcus Wood <marcus@calderadigital.com>",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist/ --ignore '**/*.test.js'",
+    "clean": "run-p clean:*",
+    "clean:build": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules",
+    "dev": "onchange -i 'src/**/*.js' -- yarn build",
+    "preinstall": "npx use-yarn",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "yarn lint --fix",
+    "precommit": "lint-staged",
+    "test": "echo 'N/A'"
+  },
+  "dependencies": {
+    "@monorepo-starter/babel-preset": "^0.1.0",
+    "@svgr/rollup": "^4.2.0",
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-postcss": "^2.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
