@@ -1,0 +1,50 @@
+import React, { useState } from 'react'
+import ReactSparkle from 'react-sparkle'
+
+export const FancyInput = ({ label, error, onBlur, ...rest }) => {
+  const [isInputFocused, setIsInputFocused] = useState(false)
+  return (
+    <div style={{ position: 'relative', marginBottom: '1rem' }}>
+      {isInputFocused && (
+        <ReactSparkle
+          color={[
+            '#01BEFE',
+            '#FFDD00',
+            '#FF7D00',
+            '#FF006D',
+            '#ADFF02',
+            '#8F00FF',
+          ]}
+          overflowPx={10}
+          minSize={5}
+          maxSize={10}
+        />
+      )}
+      <label>
+        {label && <span style={{ display: 'block' }}>{label}</span>}
+        <input
+          style={{ width: '300px' }}
+          onFocus={() => setIsInputFocused(true)}
+          onBlur={e => {
+            onBlur(e)
+            setIsInputFocused(false)
+          }}
+          {...rest}
+        />
+      </label>
+      {error && (
+        <span
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            color: 'red',
+            fontSize: '.8rem',
+          }}
+        >
+          {error}
+        </span>
+      )}
+    </div>
+  )
+}

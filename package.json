@@ -34,7 +34,10 @@
     "lint:fix": "lerna run lint:fix --parallel",
     "rebootstrap": "yarn && run-s clean bootstrap killallNode",
     "release": "yarn build && yarn lerna publish",
-    "test": "lerna run test -- parallel"
+    "test": "lerna run test -- parallel",
+    "fancy-app": "yarn lerna:run-deps --scope @monorepo-starter/fancy-app-*",
+    "fancy-app:dev": "run-s 'fancy-app build' 'fancy-app dev --parallel'",
+    "fancy-app:build": "yarn fancy-app build"
   },
   "commitlint": {
     "extends": [
