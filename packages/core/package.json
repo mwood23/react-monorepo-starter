@@ -1,6 +1,6 @@
 {
   "name": "@monorepo-starter/core",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Utility functions and small components to be shared across projects",
   "homepage": "https://github.com/mwood23/react-monorepo-starter#readme",
   "bugs": {
@@ -26,7 +26,7 @@
     "test": "echo 'N/A'"
   },
   "devDependencies": {
-    "@monorepo-starter/rollup-config": "^0.1.0"
+    "@monorepo-starter/rollup-config": "^1.0.0"
   },
   "peerDependencies": {
     "react": "16.12.0",
