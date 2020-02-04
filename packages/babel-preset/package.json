@@ -1,6 +1,6 @@
 {
   "name": "@monorepo-starter/babel-preset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Babel preset used in @monorepo-starter",
   "homepage": "https://github.com/mwood23/react-monorepo-starter#readme",
   "bugs": {
