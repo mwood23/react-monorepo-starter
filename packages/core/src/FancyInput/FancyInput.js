@@ -3,6 +3,7 @@ import ReactSparkle from 'react-sparkle'
 
 export const FancyInput = ({ label, error, onBlur, ...rest }) => {
   const [isSparkleEnabled, setIsSparkleEnabled] = useState(false)
+
   return (
     <div style={{ position: 'relative', marginBottom: '1rem' }}>
       {isSparkleEnabled && (
