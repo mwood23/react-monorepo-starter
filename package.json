@@ -39,11 +39,6 @@
     "fancy-app:dev": "run-s 'fancy-app build' 'fancy-app dev --parallel'",
     "fancy-app:build": "yarn fancy-app build"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
