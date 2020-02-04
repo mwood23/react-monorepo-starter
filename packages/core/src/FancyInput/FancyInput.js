@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import ReactSparkle from 'react-sparkle'
 
 export const FancyInput = ({ label, error, onBlur, ...rest }) => {
-  const [isInputFocused, setIsInputFocused] = useState(false)
+  const [isSparkleEnabled, setIsSparkleEnabled] = useState(false)
   return (
     <div style={{ position: 'relative', marginBottom: '1rem' }}>
-      {isInputFocused && (
+      {isSparkleEnabled && (
         <ReactSparkle
           color={[
             '#01BEFE',
@@ -24,10 +24,10 @@ export const FancyInput = ({ label, error, onBlur, ...rest }) => {
         {label && <span style={{ display: 'block' }}>{label}</span>}
         <input
           style={{ width: '300px' }}
-          onFocus={() => setIsInputFocused(true)}
+          onFocus={() => setIsSparkleEnabled(true)}
           onBlur={e => {
             onBlur(e)
-            setIsInputFocused(false)
+            setIsSparkleEnabled(false)
           }}
           {...rest}
         />
