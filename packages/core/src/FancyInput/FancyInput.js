@@ -12,13 +12,13 @@ export const FancyInput = ({ label, error, onBlur, ...rest }) => {
             '#01BEFE',
             '#FFDD00',
             '#FF7D00',
-            // '#FF006D',
-            // '#ADFF02',
-            // '#8F00FF',
+            '#FF006D',
+            '#ADFF02',
+            '#8F00FF',
           ]}
           overflowPx={10}
           minSize={5}
-          maxSize={10}
+          maxSize={40}
         />
       )}
       <label>
