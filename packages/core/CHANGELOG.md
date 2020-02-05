@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/mwood23/react-monorepo-starter/compare/@monorepo-starter/core@1.2.0...@monorepo-starter/core@1.3.0) (2020-02-05)
+
+
+### Features
+
+* added more colors! ([0f4c3c2](https://github.com/mwood23/react-monorepo-starter/commit/0f4c3c2f338023a790f29a5062dd1f8c4c68092e))
+
+
+
+
+
 # [1.2.0](https://github.com/mwood23/react-monorepo-starter/compare/@monorepo-starter/core@1.1.0...@monorepo-starter/core@1.2.0) (2020-02-04)
 
 
